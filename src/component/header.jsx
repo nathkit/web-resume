@@ -11,7 +11,7 @@ export default function Header() {
   `;
   const jobTitle = css`
     color: #9e8c6c;
-    font-family: PT Sans Narrow;
+    font-family: Kanit;
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
@@ -20,7 +20,7 @@ export default function Header() {
     text-transform: uppercase;
   `;
   const fullname = css`
-    color: var(--font-color, #000);
+    color: #000;
     font-family: Playfair Display;
     font-size: 72px;
     font-style: normal;
