@@ -17,7 +17,7 @@ const careerTraitsContent = css`
 
 function SkillSet() {
   return (
-    <div className="mb-[100px]">
+    <div className="mb-[60px] desktop:mb-[100px]">
       <h1 css={jobTitle} className="mb-2">
         SkillSet
       </h1>
@@ -34,6 +34,7 @@ function SkillSet() {
                 max={10}
                 thickness={16}
                 size={8}
+                color={"#06939f"}
               />
             </h1>
           </div>

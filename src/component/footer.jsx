@@ -1,43 +1,37 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 
-export default function Footer() {
-  const footerBG = css`
-    max-width: 1440px;
-    height: 547px;
-    background-color: rgba(158, 140, 108, 0.1);
-    clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
-  `;
-  const h1 = css`
-    color: #000;
-    text-align: center;
-    font-family: "Playfair Display", serif;
-    font-size: 66px;
-    font-style: normal;
-    font-weight: 900;
-    line-height: 82px; /* 124.242% */
-    letter-spacing: -1.138px;
-    margin-bottom: 40px;
-  `;
+export function Contact(props) {
   const email = css`
-    color: #0699a6;
+    color: ${props.color};
     text-align: center;
     font-family: "Playfair Display", serif;
     font-size: 36px;
     font-style: normal;
     font-weight: 900;
     line-height: 46px; /* 127.778% */
-    margin-bottom: 65px;
+    margin-bottom: ${props.mb};
+    @media (max-width: 768px) {
+      font-size: 30px;
+      line-height: 40px; /* 133.333% */
+    }
+    @media (max-width: 375px) {
+      text-align: center;
+      font-size: 26px;
+      line-height: 36px; /* 138.462% */
+    }
   `;
   const icon = css`
     font-size: 36px;
-    color: #0699a6;
+    color: ${props.color};
+    @media (max-width: 375px) {
+      font-size: 28px;
+    }
   `;
   return (
-    <div css={footerBG} className="flex flex-col justify-center items-center">
-      <h1 css={h1}>Get in touch!</h1>
+    <>
       <h1 id="contact" css={email}>
-        nathkit101@gmail.com | (+66)80-954-5994
+        {props.content}
       </h1>
       <div css={icon}>
         <a className="mx-5" href="https://github.com/nathkit" target="_blank">
@@ -65,6 +59,39 @@ export default function Footer() {
           <i className="fa-brands fa-square-facebook"></i>
         </a>
       </div>
+    </>
+  );
+}
+
+export default function Footer() {
+  const footerBG = css`
+    max-width: 1440px;
+    height: 547px;
+    background-color: rgba(158, 140, 108, 0.1);
+    clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
+  `;
+  const h1 = css`
+    color: var(--font-color, #000);
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    font-size: 66px;
+    line-height: 82px; /* 124.242% */
+    letter-spacing: -1.138px;
+    margin-bottom: 40px;
+    @media (max-width: 768px) {
+      text-align: center;
+      font-size: 56px;
+      line-height: 66px; /* 117.857% */
+    }
+  `;
+  return (
+    <div css={footerBG} className="flex flex-col justify-center items-center">
+      <h1 css={h1}>Get in touch!</h1>
+      <Contact
+        mb="65px"
+        color="#0699a6"
+        content="nathkit101@gmail.com | (+66)80-954-5994"
+      />
     </div>
   );
 }

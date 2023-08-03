@@ -5,10 +5,9 @@ import myData from "../data/data";
 import { paramContent, seperateLine } from "./AboutMe";
 
 export const jobTitle = css`
-  color: #9e8c6c;
+  color: var(--secondary, #9e8c6c);
   font-family: "Kanit", sans-serif;
   font-size: 18px;
-  font-style: normal;
   font-weight: 900;
   line-height: 24px; /* 133.333% */
   letter-spacing: 1px;
@@ -16,10 +15,9 @@ export const jobTitle = css`
 `;
 
 export const h1 = css`
-  color: #000;
+  color: var(--font-color, #000);
   font-family: "Playfair Display", serif;
   font-size: 36px;
-  font-style: normal;
   font-weight: 900;
   line-height: 46px; /* 127.778% */
   margin-bottom: 20px;
@@ -31,7 +29,7 @@ export default function Experience() {
     <div className="mb-10 tablet:mb-[50px] desktop:mb-[70px]">
       <h1 css={h1}>Experience</h1>
       {experiences.map((job, index) => (
-        <div className="mb-10 tablet:mb-[66px]" key={index}>
+        <div className="mb-10 tablet:mb-[60px]" key={index}>
           <div className="flex flex-col desktop:flex-row desktop:justify-between">
             <h1 css={jobTitle} className="my-auto mb-2 desktop:my-auto">
               {job.job} - {job.company}

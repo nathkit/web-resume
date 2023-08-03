@@ -1,7 +1,107 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
+import {
+  Fade,
+  ScaleFade,
+  Slide,
+  SlideFade,
+  Collapse,
+  useDisclosure,
+  Box,
+  Button,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+} from "@chakra-ui/react";
 import me from "../img/me.jpg";
+import { Contact } from "./footer";
 
+function VerticallyCenter() {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const btn = css`
+    width: 225px;
+    height: 60px;
+    color: #fff;
+    text-align: center;
+    font-family: "Kanit", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px; /* 133.333% */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  `;
+  return (
+    <>
+      <button
+        css={btn}
+        className="w-[225px] h-[60px] bg-[#0699A6]"
+        onClick={onOpen}>
+        CONTACT ME
+      </button>
+
+      <Modal onClose={onClose} isOpen={isOpen} isCentered>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader className="font-['Playfair_Display']">
+            Contact Information
+          </ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            <Contact
+              mb="10px"
+              color="#4d6070"
+              content="nathkit101@gmail.com   (+66)80-954-5994"
+            />
+          </ModalBody>
+          <ModalFooter>
+            <Button onClick={onClose}>Close</Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
+    </>
+  );
+}
+
+function CollapseEx() {
+  const { isOpen, onToggle } = useDisclosure();
+  const btn = css`
+    width: 225px;
+    height: 60px;
+    color: #fff;
+    text-align: center;
+    font-family: "Kanit", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px; /* 133.333% */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  `;
+  return (
+    <>
+      <button
+        css={btn}
+        className="w-[225px] h-[60px] bg-[#0699A6]"
+        onClick={onToggle}>
+        CONTACT ME
+      </button>
+      <Collapse in={isOpen} animateOpacity>
+        <Box
+          p="40px"
+          color="white"
+          mt="4"
+          bg="#f5f3f0"
+          rounded="md"
+          shadow="md">
+          <Contact mb="10px" />
+        </Box>
+      </Collapse>
+    </>
+  );
+}
 export default function Header() {
   const headerBG = css`
     background-color: rgba(158, 140, 108, 0.1);
@@ -22,26 +122,12 @@ export default function Header() {
     font-weight: 900;
     letter-spacing: -2.172px;
   `;
-  const btn = css`
-    width: 225px;
-    height: 60px;
-    flex-shrink: 0;
-    color: #fff;
-    text-align: center;
-    font-family: "Kanit", sans-serif;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 24px; /* 133.333% */
-    letter-spacing: 2px;
-    text-transform: uppercase;
-  `;
 
   return (
     <div
       css={headerBG}
-      className="mx-auto min-w-[375px] min-h-[596px] flex flex-col items-center tablet:max-w-[768px] tablet:min-h-[747px] desktop:max-w-[1440px] desktop:min-h-[747px] desktop:flex-row desktop:justify-around desktop:items-center">
-      <div className="relative mt-20">
+      className="mx-auto min-w-[375px] min-h-[596px] flex flex-col items-center tablet:max-w-[768px] tablet:min-h-[736px] desktop:max-w-[1440px] desktop:min-h-[747px] desktop:flex-row desktop:justify-around desktop:items-center">
+      <div className="relative mt-20 desktop:my-auto">
         <img
           src={me}
           className="max-w-40 max-h-40 rounded-full tablet:max-w-52 tablet:max-h-52 desktop:max-w-[350px] desktop:max-h-[350px]"
@@ -63,7 +149,7 @@ export default function Header() {
       <div className="max-w-fit max-h-fit flex flex-col items-center mt-8 desktop:items-start">
         <h1
           css={jobTitle}
-          className="text-sm text-center max-w-[375px] tablet:max-w-[418px] tablet:text-lg desktop:max-w-[635px] desktop:mb-[10px]">
+          className="text-sm text-center max-w-[375px] tablet:max-w-[482px] tablet:text-lg desktop:max-w-[635px] desktop:mb-[10px]">
           FULLSTACK SOFTWARE DEVELOPER / DATA ANALYST
         </h1>
         <h1
@@ -71,9 +157,8 @@ export default function Header() {
           css={fullname}>
           Nathkit Tangthumrongsakkul
         </h1>
-        <button css={btn} className="w-[225px] h-[60px] bg-[#0699A6]">
-          CONTACT ME
-        </button>
+        <VerticallyCenter />
+        {/* <CollapseEx /> */}
       </div>
     </div>
   );
