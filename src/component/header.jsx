@@ -11,7 +11,7 @@ export default function Header() {
   `;
   const jobTitle = css`
     color: #9e8c6c;
-    font-family: Kanit;
+    font-family: "Kanit", sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
@@ -21,8 +21,8 @@ export default function Header() {
   `;
   const fullname = css`
     color: #000;
-    font-family: Playfair Display;
-    font-size: 72px;
+    font-family: "Playfair Display", serif;
+    font-size: 70px;
     font-style: normal;
     font-weight: 900;
     line-height: 112px; /* 88.889% */
@@ -34,7 +34,7 @@ export default function Header() {
     flex-shrink: 0;
     color: #fff;
     text-align: center;
-    font-family: PT Sans Narrow;
+    font-family: "Kanit", sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
@@ -71,7 +71,7 @@ export default function Header() {
         </svg>
       </div>
 
-      <div className="w-[635px] flex flex-col justify-center">
+      <div className="w-[700px] flex flex-col justify-center">
         <h1 css={jobTitle}>FULLSTACK SOFTWARE DEVELOPER / DATA ANALYST</h1>
         <h1 className="mt-2.5" css={fullname}>
           Nathkit Tangthumrongsakkul
