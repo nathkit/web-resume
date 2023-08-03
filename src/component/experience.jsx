@@ -2,7 +2,7 @@
 import { css } from "@emotion/react";
 import React from "react";
 import myData from "../data/data";
-import { paramContent } from "./AboutMe";
+import { paramContent, seperateLine } from "./AboutMe";
 
 export const jobTitle = css`
   color: #9e8c6c;
@@ -28,12 +28,12 @@ export const h1 = css`
 export default function Experience() {
   const experiences = myData.experience;
   return (
-    <div>
+    <div className="mb-10 tablet:mb-[50px] desktop:mb-[70px]">
       <h1 css={h1}>Experience</h1>
       {experiences.map((job, index) => (
-        <div className="mb-[66px]" key={index}>
-          <div className="flex justify-between">
-            <h1 css={jobTitle} className="my-auto">
+        <div className="mb-10 tablet:mb-[66px]" key={index}>
+          <div className="flex flex-col desktop:flex-row desktop:justify-between">
+            <h1 css={jobTitle} className="my-auto mb-2 desktop:my-auto">
               {job.job} - {job.company}
             </h1>
             <h1 css={paramContent} className="text-lg">
@@ -47,6 +47,7 @@ export default function Experience() {
           ))}
         </div>
       ))}
+      <div css={seperateLine} className="mt-10 ml-0"></div>
     </div>
   );
 }

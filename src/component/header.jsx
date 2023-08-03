@@ -4,28 +4,22 @@ import me from "../img/me.jpg";
 
 export default function Header() {
   const headerBG = css`
-    max-width: 1440px;
-    height: 747px;
     background-color: rgba(158, 140, 108, 0.1);
     clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
   `;
   const jobTitle = css`
-    color: #9e8c6c;
+    color: var(--secondary, #9e8c6c);
     font-family: "Kanit", sans-serif;
-    font-size: 18px;
-    font-style: normal;
     font-weight: 700;
-    line-height: 24px; /* 133.333% */
-    letter-spacing: 2px;
+    line-height: 20px; /* 133.333% */
+    letter-spacing: 1px;
     text-transform: uppercase;
   `;
   const fullname = css`
-    color: #000;
+    color: var(--font-color, #000);
     font-family: "Playfair Display", serif;
-    font-size: 70px;
     font-style: normal;
     font-weight: 900;
-    line-height: 112px; /* 88.889% */
     letter-spacing: -2.172px;
   `;
   const btn = css`
@@ -42,24 +36,19 @@ export default function Header() {
     letter-spacing: 2px;
     text-transform: uppercase;
   `;
-  const imgDiv = css`
-    position: relative;
-  `;
-  const textCircle = css`
-    position: absolute;
-    left: 238px;
-    top: 241px;
-  `;
 
   return (
-    <div css={headerBG} className="flex justify-around items-center">
-      <div css={imgDiv}>
-        <img src={me} className="w-[350px] h-[350px] rounded-full" />
+    <div
+      css={headerBG}
+      className="mx-auto min-w-[375px] min-h-[596px] flex flex-col items-center tablet:max-w-[768px] tablet:min-h-[747px] desktop:max-w-[1440px] desktop:min-h-[747px] desktop:flex-row desktop:justify-around desktop:items-center">
+      <div className="relative mt-20">
+        <img
+          src={me}
+          className="max-w-40 max-h-40 rounded-full tablet:max-w-52 tablet:max-h-52 desktop:max-w-[350px] desktop:max-h-[350px]"
+        />
         <svg
-          css={textCircle}
           xmlns="http://www.w3.org/2000/svg"
-          width="152"
-          height="152"
+          className="w-[100px] h-[100px] absolute top-[-30px] left-[90px] tablet:top-[-30px] tablet:left-[130px] desktop:top-[238px] desktop:left-[241px] desktop:w-[152px] desktop:h-[152px]"
           viewBox="0 0 152 152"
           fill="none">
           <path
@@ -71,12 +60,18 @@ export default function Header() {
         </svg>
       </div>
 
-      <div className="w-[700px] flex flex-col justify-center">
-        <h1 css={jobTitle}>FULLSTACK SOFTWARE DEVELOPER / DATA ANALYST</h1>
-        <h1 className="mt-2.5" css={fullname}>
+      <div className="max-w-fit max-h-fit flex flex-col items-center mt-8 desktop:items-start">
+        <h1
+          css={jobTitle}
+          className="text-sm text-center max-w-[375px] tablet:max-w-[418px] tablet:text-lg desktop:max-w-[635px] desktop:mb-[10px]">
+          FULLSTACK SOFTWARE DEVELOPER / DATA ANALYST
+        </h1>
+        <h1
+          className="mt-4 mb-10 text-center text-4xl max-w-[375px] tablet:max-w-[482px] tablet:text-5xl desktop:max-w-[720px] desktop:text-7xl desktop:mb-10 desktop:min-h-[100px] desktop:text-left"
+          css={fullname}>
           Nathkit Tangthumrongsakkul
         </h1>
-        <button css={btn} className="w-[225px] h-[60px] bg-[#0699A6] mt-10">
+        <button css={btn} className="w-[225px] h-[60px] bg-[#0699A6]">
           CONTACT ME
         </button>
       </div>

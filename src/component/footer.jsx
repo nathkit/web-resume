@@ -36,7 +36,9 @@ export default function Footer() {
   return (
     <div css={footerBG} className="flex flex-col justify-center items-center">
       <h1 css={h1}>Get in touch!</h1>
-      <h1 css={email}>nathkit101@gmail.com | (+66)-80-954-5994</h1>
+      <h1 id="contact" css={email}>
+        nathkit101@gmail.com | (+66)80-954-5994
+      </h1>
       <div css={icon}>
         <a className="mx-5" href="https://github.com/nathkit" target="_blank">
           <i className="fa-brands fa-github"></i>

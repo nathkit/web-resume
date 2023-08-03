@@ -2,7 +2,7 @@
 import { css } from "@emotion/react";
 import React from "react";
 import myData from "../data/data";
-import { paramContent } from "./AboutMe";
+import { paramContent, seperateLine } from "./AboutMe";
 import { h1, jobTitle } from "../component/experience";
 
 export default function Education() {
@@ -18,6 +18,7 @@ export default function Education() {
           </h1>
         </div>
       </div>
+      <div css={seperateLine} className="mt-10 ml-0"></div>
     </div>
   );
 }

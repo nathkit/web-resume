@@ -8,11 +8,11 @@ import Education from "./education ";
 
 export default function Body() {
   return (
-    <div className="max-w-[1440px] flex pt-[83px]">
-      <div className="w-[350px]">
+    <div className="max-w-[335px] flex flex-col-reverse mt-10 desktop:flex-row tablet:max-w-[482px] desktop:max-w-[1440px]">
+      <div className="max-w-[350px]">
         <SideSection />
       </div>
-      <div className="w-[700px]">
+      <div className="max-w-[700px]">
         <AboutMe />
         <Experience />
         <Education />

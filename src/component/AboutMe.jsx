@@ -11,10 +11,15 @@ export const paramContent = css`
   font-weight: 400;
   line-height: 34px; /* 170% */
 `;
+export const seperateLine = css`
+  background: var(--primary, #0699a6);
+  width: 54px;
+  height: 10px;
+`;
 
 export default function AboutMe() {
   return (
-    <div className="mb-[66px]">
+    <div className="mx-auto mb-10 max-w-[335px] tablet:mb-12 tablet:max-w-[482px] desktop:mb-16 desktop:max-w-[700px]">
       <h1 css={h1}>About Me</h1>
       <p css={paramContent}>
         I was a process and production engineer turned full-stack software
@@ -24,6 +29,7 @@ export default function AboutMe() {
         with a passion for user-centric applications and data visualization, I
         am dedicated to continuous learning and driving impactful results.
       </p>
+      <div css={seperateLine} className="mt-10 ml-0"></div>
     </div>
   );
 }
