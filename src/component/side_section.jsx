@@ -3,9 +3,8 @@ import { css } from "@emotion/react";
 import { CircularProgress, CircularProgressLabel } from "@chakra-ui/react";
 import React from "react";
 import myData from "../data/data";
-import { h1, jobTitle } from "../component/experience";
-import { paramContent } from "./AboutMe";
-import Education from "./education ";
+import { ColorDataContext } from "../App";
+import { useContext } from "react";
 
 const careerTraitsContent = css`
   font-family: "Kanit", sans-serif;
@@ -15,7 +14,7 @@ const careerTraitsContent = css`
   line-height: 34px;
 `;
 
-function SkillSet() {
+function SkillSet({ jobTitle, paramContent }) {
   return (
     <div className="mb-[60px] desktop:mb-[100px]">
       <h1 css={jobTitle} className="mb-2">
@@ -43,10 +42,10 @@ function SkillSet() {
     </div>
   );
 }
-function CareerTraits() {
+function CareerTraits(props) {
   return (
     <div className="mb-[100px]">
-      <h1 css={jobTitle} className="mb-2">
+      <h1 css={props.cssprops} className="mb-2">
         Career Traits
       </h1>
       {myData.careertraits.map((item, index) => {
@@ -59,10 +58,10 @@ function CareerTraits() {
     </div>
   );
 }
-function RecentWork() {
+function RecentWork(props) {
   return (
     <div className="mb-[100px]">
-      <h1 css={jobTitle} className="mb-2">
+      <h1 css={props.cssprops} className="mb-2">
         Recent Works
       </h1>
       {myData.recentwork.map((item, index) => {
@@ -82,11 +81,30 @@ function RecentWork() {
 }
 
 function SideSection() {
+  const context = useContext(ColorDataContext);
+  const jobTitle = css`
+    color: ${context.color.jobcolor};
+    font-family: "Kanit", sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 24px; /* 133.333% */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  `;
+
+  const paramContent = css`
+    color: ${context.color.textcolor};
+    font-family: "Kanit", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 34px; /* 170% */
+  `;
   return (
     <div>
-      <SkillSet />
-      <CareerTraits />
-      <RecentWork />
+      <SkillSet cssprops={(jobTitle, paramContent)} />
+      <CareerTraits cssprops={jobTitle} />
+      <RecentWork cssprops={jobTitle} />
     </div>
   );
 }

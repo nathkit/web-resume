@@ -1,5 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
+import { ColorDataContext } from "../App";
+import { useContext } from "react";
 
 export function Contact(props) {
   const email = css`
@@ -64,14 +66,15 @@ export function Contact(props) {
 }
 
 export default function Footer() {
+  const context = useContext(ColorDataContext);
   const footerBG = css`
     max-width: 1440px;
     height: 547px;
-    background-color: rgba(158, 140, 108, 0.1);
+    background-color: ${context.color.headercolor};
     clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
   `;
   const h1 = css`
-    color: var(--font-color, #000);
+    color: ${context.color.textcolor};
     text-align: center;
     font-family: "Playfair Display", serif;
     font-size: 66px;

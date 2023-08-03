@@ -16,9 +16,19 @@ import {
   ModalFooter,
   ModalBody,
   ModalCloseButton,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  MenuItemOption,
+  MenuGroup,
+  MenuOptionGroup,
+  MenuDivider,
 } from "@chakra-ui/react";
 import me from "../img/me.jpg";
 import { Contact } from "./footer";
+import { ColorDataContext } from "../App";
+import { useContext } from "react";
 
 function VerticallyCenter() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -102,13 +112,16 @@ function CollapseEx() {
     </>
   );
 }
+// rgba(158, 140, 108, 0.1);
 export default function Header() {
+  const context = useContext(ColorDataContext);
+  console.log(context.color.jobcolor);
   const headerBG = css`
-    background-color: rgba(158, 140, 108, 0.1);
+    background-color: ${context.color.headercolor};
     clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
   `;
   const jobTitle = css`
-    color: var(--secondary, #9e8c6c);
+    color: ${context.color.jobcolor};
     font-family: "Kanit", sans-serif;
     font-weight: 700;
     line-height: 20px; /* 133.333% */
@@ -116,7 +129,7 @@ export default function Header() {
     text-transform: uppercase;
   `;
   const fullname = css`
-    color: var(--font-color, #000);
+    color: ${context.color.textcolor};
     font-family: "Playfair Display", serif;
     font-style: normal;
     font-weight: 900;
@@ -134,7 +147,7 @@ export default function Header() {
         />
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="w-[100px] h-[100px] absolute top-[-30px] left-[90px] tablet:top-[-30px] tablet:left-[130px] desktop:top-[238px] desktop:left-[241px] desktop:w-[152px] desktop:h-[152px]"
+          className="animate-spin-slow w-[100px] h-[100px] absolute top-[-30px] left-[90px] tablet:top-[-30px] tablet:left-[130px] desktop:top-[238px] desktop:left-[241px] desktop:w-[152px] desktop:h-[152px]"
           viewBox="0 0 152 152"
           fill="none">
           <path

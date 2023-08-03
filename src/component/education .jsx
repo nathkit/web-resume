@@ -2,8 +2,8 @@
 import { css } from "@emotion/react";
 import React from "react";
 import myData from "../data/data";
-import { paramContent } from "./AboutMe";
-import { h1, jobTitle } from "../component/experience";
+import { ColorDataContext } from "../App";
+import { useContext } from "react";
 
 export const seperateLine = css`
   @media (max-width: 1280px) {
@@ -14,6 +14,33 @@ export const seperateLine = css`
 `;
 
 export default function Education() {
+  const context = useContext(ColorDataContext);
+  const paramContent = css`
+    color: ${context.color.textcolor};
+    font-family: "Kanit", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 34px; /* 170% */
+  `;
+  const jobTitle = css`
+    color: ${context.color.jobcolor};
+    font-family: "Kanit", sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 24px; /* 133.333% */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  `;
+
+  const h1 = css`
+    color: ${context.color.textcolor};
+    font-family: "Playfair Display", serif;
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 46px; /* 127.778% */
+    margin-bottom: 20px;
+  `;
   return (
     <div className="mb-[40px]">
       <h1 css={h1}>Education</h1>

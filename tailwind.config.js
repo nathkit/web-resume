@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        'spin-slow': 'spin 4s linear infinite',
+      }
+    },
     screens: {
       'mobile': '375px',
       // => @media (min-width: 375px) { ... }
