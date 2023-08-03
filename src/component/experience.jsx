@@ -6,19 +6,18 @@ import { paramContent } from "./AboutMe";
 
 export const jobTitle = css`
   color: #9e8c6c;
-  font-family: Kanit;
-  font-size: 16px;
+  font-family: "Kanit", sans-serif;
+  font-size: 18px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 900;
   line-height: 24px; /* 133.333% */
   letter-spacing: 1px;
   text-transform: uppercase;
-  margin: auto 0;
 `;
 
 export const h1 = css`
   color: #000;
-  font-family: Playfair Display;
+  font-family: "Playfair Display", serif;
   font-size: 36px;
   font-style: normal;
   font-weight: 900;
@@ -34,7 +33,7 @@ export default function Experience() {
       {experiences.map((job, index) => (
         <div className="mb-[66px]" key={index}>
           <div className="flex justify-between">
-            <h1 css={jobTitle}>
+            <h1 css={jobTitle} className="my-auto">
               {job.job} - {job.company}
             </h1>
             <h1 css={paramContent} className="text-lg">

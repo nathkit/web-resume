@@ -148,5 +148,32 @@ export const myData = {
       company: "Fujikura Electronics CO.,LTD",
     },
   ],
+  careertraits: [
+    {
+      topic: "Holistic Designer",
+      desc: "Design should be treated as a living organism, guided by the environment it lives in as a whole.",
+    },
+    {
+      topic: "User-Focused",
+      desc: "I pay close attention to the user’s needs and pain points. I design with empathy. Launch, learn & iterate.",
+    },
+    {
+      topic: "Proactive Evolution",
+      desc: "Curiosity and a desire to learn constantly broadens my skill set, enabling me to wear many hats at once.",
+    },
+    {
+      topic: "Bold, yet practical",
+      desc: "I know when to push the boundaries vs. when to embrace simplicity to meet multiple deadlines.",
+    },
+  ],
+  recentwork: [
+    "thedonut.co",
+    "outboundengine.com",
+    "rswalsh.com",
+    "frondaustin.com",
+    "tipyo.net",
+    "codefresh.io",
+    "carsoncreekranch.com",
+  ],
 };
 export default myData;

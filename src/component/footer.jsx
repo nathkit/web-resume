@@ -11,7 +11,7 @@ export default function Footer() {
   const h1 = css`
     color: #000;
     text-align: center;
-    font-family: Playfair Display;
+    font-family: "Playfair Display", serif;
     font-size: 66px;
     font-style: normal;
     font-weight: 900;
@@ -22,7 +22,7 @@ export default function Footer() {
   const email = css`
     color: #0699a6;
     text-align: center;
-    font-family: Playfair Display;
+    font-family: "Playfair Display", serif;
     font-size: 36px;
     font-style: normal;
     font-weight: 900;

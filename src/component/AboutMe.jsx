@@ -5,7 +5,7 @@ import { h1 } from "../component/experience";
 
 export const paramContent = css`
   color: #000;
-  font-family: Kanit;
+  font-family: "Kanit", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
