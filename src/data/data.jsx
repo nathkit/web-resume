@@ -4,12 +4,14 @@ export const myData = {
     {
       degree: "BACHELOR DEGREE ",
       major: "Chemical Engineering",
+      school: "King Mongkut's University of Technology North Bangkok",
       year: "2010 to 2014",
       grade: "2.67/4.00",
     },
     {
       degree: "HIGH SCHOOL",
       major: "Math-Sci",
+      school: "Kannasoot Suksalai School",
       year: "2007 to 2010",
       grade: "3.13/4.00",
     },
@@ -83,6 +85,15 @@ export const myData = {
   ],
   experience: [
     {
+      job: "Developer in Training",
+      desc: [
+        "Completed intensive training in HTML, CSS, CLI, React, JavaScript, SQL, MongoDB, Node.js, Express.js, Git/Github, Authentication, Software Testing, Data Structures, and Algorithms.",
+        "Developed soft skills including teamwork, problem-solving, communication, call for help, norm setting, scrum work, agile work, setting targets, self-learning, building a growth mindset, handling imposter syndrome, and managing conflicts.",
+      ],
+      year: "Jun'23 to Present",
+      company: "TechUp Training Bootcamp",
+    },
+    {
       job: "Mixing Process Control",
       desc: [
         "Developed compound mixing production plans to optimize manufacturing processes.",
@@ -93,10 +104,10 @@ export const myData = {
         "Demonstrated proficiency in inventory stock control, balancing actual stock with system records.",
       ],
       year: "Nov'22 to Jun'23",
-      company: "Inoue Rubber Thailand PCL ",
+      company: "Inoue Rubber Thailand PCL",
     },
     {
-      job: "Shift Supervisor",
+      job: "Hotend Supervisor",
       desc: [
         "Controlled and monitored daily output and production time to meet production plans.",
         "Ensured adherence to quality specifications by monitoring process and product quality on the production line.",
@@ -108,10 +119,10 @@ export const myData = {
         "Issued performance reports and concern documents.",
       ],
       year: "Jun'19 to Oct'22",
-      company: "Kabinburi Glass Industry Co., Ltd",
+      company: "Kabinburi Glass Industry Co.,Ltd",
     },
     {
-      job: "Hotend Engineer",
+      job: "Process Engineer",
       desc: [
         "Installed and commissioned Glass forming process machines",
         "Prepared work instruction sheets for process operations.",
@@ -122,7 +133,7 @@ export const myData = {
         "Conducted ISO9001:2015 Internal Quality Audits.",
       ],
       year: "Mar'17 to Jun'19",
-      company: "Kabinburi Glass Industry Co., Ltd",
+      company: "Kabinburi Glass Industry Co.,Ltd",
     },
     {
       job: "Production Engineer",
@@ -134,7 +145,7 @@ export const myData = {
         "Set and adjusted machine conditions, ensuring efficient and reliable performance throughout the production process.",
       ],
       year: "Dec'15 to Feb'17",
-      company: "Fujikura Electronics Ltd.",
+      company: "Fujikura Electronics CO.,LTD",
     },
   ],
 };

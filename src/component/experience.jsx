@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import React from "react";
-import { myData } from "../data/data";
+import myData from "../data/data";
 import { paramContent } from "./AboutMe";
 
 export const jobTitle = css`
@@ -23,6 +23,7 @@ export const h1 = css`
   font-style: normal;
   font-weight: 900;
   line-height: 46px; /* 127.778% */
+  margin-bottom: 20px;
 `;
 
 export default function Experience() {

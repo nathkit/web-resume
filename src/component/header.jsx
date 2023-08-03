@@ -4,7 +4,7 @@ import me from "../img/me.jpg";
 
 export default function Header() {
   const headerBG = css`
-    width: 1440px;
+    max-width: 1440px;
     height: 747px;
     background-color: rgba(158, 140, 108, 0.1);
     clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
