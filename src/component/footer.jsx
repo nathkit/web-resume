@@ -32,7 +32,7 @@ export function Contact(props) {
   `;
   return (
     <>
-      <h1 id="contact" css={email}>
+      <h1 id="contact" css={email} className="text-etc-primary">
         {props.content}
       </h1>
       <div css={icon}>
@@ -73,23 +73,12 @@ export default function Footer() {
     background-color: ${context.color.headercolor};
     clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
   `;
-  const h1 = css`
-    color: ${context.color.textcolor};
-    text-align: center;
-    font-family: "Playfair Display", serif;
-    font-size: 66px;
-    line-height: 82px; /* 124.242% */
-    letter-spacing: -1.138px;
-    margin-bottom: 40px;
-    @media (max-width: 768px) {
-      text-align: center;
-      font-size: 56px;
-      line-height: 66px; /* 117.857% */
-    }
-  `;
+
   return (
     <div css={footerBG} className="flex flex-col justify-center items-center">
-      <h1 css={h1}>Get in touch!</h1>
+      <h1 className="mb-10 font-playfair text-headline2t desktop:text-headline2d">
+        Get in touch!
+      </h1>
       <Contact
         mb="65px"
         color="#0699a6"

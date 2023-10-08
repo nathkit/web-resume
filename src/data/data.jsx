@@ -19,78 +19,49 @@ export const myData = {
   languages: ["Thai Native", "English"],
   skill: [
     {
-      title: "HTML",
-      score: 8,
-      maxscore: 10,
+      headline: "Frontend - ",
+      title: "HTML5, CSS3, JavaScript, TailwindCSS, Reat.js ",
     },
     {
-      title: "CSS",
-      score: 8,
-      maxscore: 10,
+      headline: "Backend - ",
+      title: "Node.js, Express.js, MongoDB, PostgreSQL",
     },
     {
-      title: "JavaScript",
-      score: 8,
-      maxscore: 10,
+      headline: "Version Control - ",
+      title: "Git & Github",
     },
     {
-      title: "React",
-      score: 7,
-      maxscore: 10,
+      headline: "Cloud-Server - ",
+      title: "Supabase, Firebase",
     },
     {
-      title: "Node.js",
-      score: 0,
-      maxscore: 10,
-    },
-    {
-      title: "Express.js",
-      score: 0,
-      maxscore: 10,
-    },
-    {
-      title: "SQL",
-      score: 0,
-      maxscore: 10,
-    },
-    {
-      title: "MongoDB",
-      score: 0,
-      maxscore: 10,
-    },
-    {
-      title: "Git/Github",
-      score: 8,
-      maxscore: 10,
-    },
-    {
-      title: "Authentication",
-      score: 0,
-      maxscore: 10,
-    },
-    {
-      title: "Software Testing",
-      score: 5,
-      maxscore: 10,
-    },
-    {
-      title: "Data Structures และ Algorithms",
-      score: 8,
-      maxscore: 10,
+      headline: "Data Analytics - ",
+      title:
+        "Web Scraping, Data Wrangling, Exploratory Data Analysis, Excel, Power BI",
     },
   ],
   certificate: [
-    "Problem Solving Using Computational Thinking",
-    "Full-stack Software Developer by TechUp",
+    {
+      title: "Fullstack Web Developer",
+      by: "by TechUp 2023",
+    },
+    {
+      title: "Data Analytics Bootcamp",
+      by: "by Skooldio 2023",
+    },
+    {
+      title: "Problem Solving Using Computational Thinking",
+      by: "by Coursera 2021",
+    },
   ],
   experience: [
     {
       job: "Developer in Training",
       desc: [
-        "Completed intensive training in HTML, CSS, CLI, React, JavaScript, SQL, MongoDB, Node.js, Express.js, Git/Github, Authentication, Software Testing, Data Structures, and Algorithms.",
+        "Completed intensive training in HTML, CSS, CLI, React, JavaScript, SQL, MongoDB, Node.js, Express.js, Git/Github, Authentication, Data Structures, and Algorithms.",
         "Developed soft skills including teamwork, problem-solving, communication, call for help, norm setting, scrum work, agile work, setting targets, self-learning, building a growth mindset, handling imposter syndrome, and managing conflicts.",
       ],
-      year: "Jun'23 to Present",
+      year: "Jun'23 to Oct'23",
       company: "TechUp Training Bootcamp",
     },
     {
@@ -166,14 +137,22 @@ export const myData = {
       desc: "I know when to push the boundaries vs. when to embrace simplicity to meet multiple deadlines.",
     },
   ],
-  recentwork: [
-    "thedonut.co",
-    "outboundengine.com",
-    "rswalsh.com",
-    "frondaustin.com",
-    "tipyo.net",
-    "codefresh.io",
-    "carsoncreekranch.com",
+  project: [
+    {
+      title: "React Calculator →",
+      link: "https://calculator-nathkit.netlify.app/",
+      desc: "This webpage using Tailwind CSS and React.js",
+    },
+    {
+      title: "Tip Calculator →",
+      link: "https://tipcalculator-nathkit.netlify.app/",
+      desc: "Contributed to a project built with VITE and React, utilizing the built-in useState function for state management.",
+    },
+    {
+      title: "Pet-Sitter →",
+      link: "https://pet-sitter-53f4f.web.app/",
+      desc: "Contributed to a project built with VITE and React, utilizing the built-in useState function for state management.",
+    },
   ],
 };
 export default myData;

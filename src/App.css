@@ -3,9 +3,23 @@
 * {
   box-sizing: border-box;
   /* outline: 1px solid tomato; */
+  border: none;
   padding: 0;
   margin: 0 auto;
 }
 
 /* font-family: 'Kanit', sans-serif;
 font-family: 'Playfair Display', serif; */
+
+.btn {
+  width: 225px;
+  height: 60px;
+  color: #fff;
+  text-align: center;
+  font-family: "Kanit", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px; /* 133.333% */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
