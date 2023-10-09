@@ -2,19 +2,10 @@ import React from "react";
 import AboutMe from "./right-section/AboutMe";
 import Experience from "./right-section/experience";
 import SideSection from "./side_section";
-import Education from "./right-section/education ";
 import { useDarkmode } from "../contexts/darkmodeContext";
-import { background } from "@chakra-ui/react";
 
 export default function Body() {
-  const {
-    jobTitle,
-    paramContent,
-    separateLine,
-    isDarkMode,
-    setIsDarkMode,
-    textColor,
-  } = useDarkmode();
+  const { isDarkMode } = useDarkmode();
   return (
     <div
       style={{

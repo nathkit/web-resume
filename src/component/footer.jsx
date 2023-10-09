@@ -1,10 +1,4 @@
 import { useDarkmode } from "../contexts/darkmodeContext";
-import bglight from "../assets/footerBg.svg";
-import bglightTablet from "../assets/footerBgTablet.svg";
-import bglightMobile from "../assets/footerBgMobile.svg";
-import bgDark from "../assets/footerBgDark.svg";
-import bgDarkTablet from "../assets/footerBgDarkTablet.svg";
-import bgDarkMobile from "../assets/footerBgDarkMobile.svg";
 
 export function Contact(props) {
   return (

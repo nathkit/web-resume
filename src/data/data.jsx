@@ -141,16 +141,19 @@ export const myData = {
     {
       title: "React Calculator →",
       link: "https://calculator-nathkit.netlify.app/",
+      link2: "https://github.com/nathkit/calculator.git",
       desc: "This webpage using Tailwind CSS and React.js",
     },
     {
       title: "Tip Calculator →",
       link: "https://tipcalculator-nathkit.netlify.app/",
+      link2: "https://github.com/nathkit/tip-calculator-react.git",
       desc: "Our Tip & Share Calculator, built with React.js & Tailwind CSS, ensures everyone pays their fair share during group outings. Elegance and efficiency at your fingertips.",
     },
     {
       title: "Pet-Sitter →",
       link: "https://pet-sitter-53f4f.web.app/",
+      link2: "https://github.com/nathkit/petsitter.git",
       desc: "the Pet-Sitter App. Built with React.js Node.js PostgreSQL Supabase Cloud. Featuring booking system, user management system and authentication system",
     },
   ],

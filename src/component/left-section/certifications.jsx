@@ -2,8 +2,7 @@ import myData from "../../data/data";
 import { useDarkmode } from "../../contexts/darkmodeContext";
 
 export default function Certifications() {
-  const { jobTitle, paramContent, textColor, isDarkMode, separateLine } =
-    useDarkmode();
+  const { paramContent, textColor, isDarkMode, separateLine } = useDarkmode();
   return (
     <div className="mb-10">
       <h1 className={`mb-4 font-playfair text-headline3 ${textColor()}`}>

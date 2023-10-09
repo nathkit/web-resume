@@ -2,8 +2,7 @@ import React from "react";
 import { useDarkmode } from "../../contexts/darkmodeContext";
 
 export default function AboutMe() {
-  const { paramContent, separateLine, isDarkMode, setIsDarkMode, textColor } =
-    useDarkmode();
+  const { paramContent, separateLine, textColor } = useDarkmode();
 
   return (
     <div className="mx-auto mb-10 max-w-[335px] tablet:mb-12 tablet:max-w-[768px] desktop:mb-16 desktop:max-w-[1440px]">

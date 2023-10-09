@@ -1,17 +1,10 @@
 import me from "../img/me.jpg";
 import nicetomeetyou from "../assets/nicetomeetyou.svg";
 import { useDarkmode } from "../contexts/darkmodeContext";
-import headerBg from "../assets/headerBg.svg";
-import headerBgTablet from "../assets/headerBgTablet.svg";
-import headerBgMobile from "../assets/headerBgMobile.svg";
-import headerBgDark from "../assets/headerBgDark.svg";
-import headerBgDarkTablet from "../assets/headerBgDarkTablet.svg";
-import headerBgDarkMobile from "../assets/headerBgDarkMobile.svg";
 import Switch from "./switch";
 
 export default function Header() {
-  const { jobTitle, isDarkMode, setIsDarkMode, textColor, headerBg } =
-    useDarkmode();
+  const { jobTitle, isDarkMode, textColor, headerBg } = useDarkmode();
 
   return (
     <div

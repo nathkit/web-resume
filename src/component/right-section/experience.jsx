@@ -3,14 +3,7 @@ import myData from "../../data/data";
 import { useDarkmode } from "../../contexts/darkmodeContext";
 
 export default function Experience() {
-  const {
-    jobTitle,
-    paramContent,
-    separateLine,
-    isDarkMode,
-    setIsDarkMode,
-    textColor,
-  } = useDarkmode();
+  const { jobTitle, paramContent, separateLine, textColor } = useDarkmode();
 
   const experiences = myData.experience;
 
