@@ -18,7 +18,10 @@ export function Contact(props) {
         <a className="mx-5" href="https://github.com/nathkit" target="_blank">
           <i className="fa-brands fa-github"></i>
         </a>
-        <a className="mx-5" href="#" target="_blank">
+        <a
+          className="mx-5"
+          href="https://discordapp.com/users/871385657812058142"
+          target="_blank">
           <i className="fa-brands fa-discord"></i>
         </a>
         <a
