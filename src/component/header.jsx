@@ -50,7 +50,7 @@ export default function Header() {
             onClick={() => {
               const resumeLink = document.createElement("a");
               resumeLink.href =
-                "https://1drv.ms/b/s!Arju_3xRjjHWxZIto48G0vUyhhrq-Q?e=W0JVll";
+                "https://drive.google.com/file/d/1OScovOGgMS437AJtk5RycE_xJFQwJ-mc/view?usp=sharing";
               resumeLink.target = "_blank";
               resumeLink.rel = "noopener noreferrer";
               resumeLink.download = "231009_Nathkit Resume.pdf";

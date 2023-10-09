@@ -6,7 +6,7 @@ export default function SkillSet(props) {
   return (
     <div className="mb-10">
       <h1 className={`mb-2 font-playfair text-headline3 ${textColor()}`}>
-        Skill Set
+        Skill-Sets
       </h1>
       {myData.skill.map((skill, index) => {
         return (
