@@ -49,6 +49,14 @@ export default {
             fontWeight: "900",
           }
         ],
+        headline3m: [
+          "26px",
+          {
+            fontFamily: 'playfair',
+            lineHeight: "36px",
+            fontWeight: "900",
+          }
+        ],
         headline1t: [
           "3rem",
           {

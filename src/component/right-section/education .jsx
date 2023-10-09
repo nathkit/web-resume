@@ -38,7 +38,7 @@ export default function Education() {
           </h1>
         </div>
       </div>
-      <div className="mt-10 ml-0"></div>
+      <div className={`mt-10 ml-0 ${separateLine}`}></div>
     </div>
   );
 }

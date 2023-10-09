@@ -15,7 +15,7 @@ export default function Experience() {
   const experiences = myData.experience;
 
   return (
-    <div className="mx-auto mb-10 max-w-[335px] tablet:max-w-[768px] tablet:mb-[50px] desktop:mb-[70px]">
+    <div className="mb-10 max-w-[335px] tablet:max-w-[768px] tablet:mb-[50px] desktop:mb-[70px]">
       <h1 className={`font-playfair text-headline3 mb-5 ${textColor()}`}>
         Experience
       </h1>

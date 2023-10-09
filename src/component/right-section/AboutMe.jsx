@@ -1,8 +1,4 @@
-/** @jsxImportSource @emotion/react */
-import { css } from "@emotion/react";
 import React from "react";
-import { ColorDataContext } from "../../App";
-import { useContext } from "react";
 import { useDarkmode } from "../../contexts/darkmodeContext";
 
 export default function AboutMe() {
@@ -10,7 +6,7 @@ export default function AboutMe() {
     useDarkmode();
 
   return (
-    <div className="mx-auto mb-10 max-w-[335px] tablet:mb-12 tablet:max-w-[768px] desktop:mb-16 desktop:max-w-[700px]">
+    <div className="mx-auto mb-10 max-w-[335px] tablet:mb-12 tablet:max-w-[768px] desktop:mb-16 desktop:max-w-[1440px]">
       <h1 className={`font-playfair text-headline3 mb-5 ${textColor()}`}>
         About Me
       </h1>

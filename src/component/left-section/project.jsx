@@ -2,7 +2,7 @@ import myData from "../../data/data";
 import { useDarkmode } from "../../contexts/darkmodeContext";
 
 export default function Project() {
-  const { jobTitle, paramContent, textColor } = useDarkmode();
+  const { jobTitle, paramContent, textColor, separateLine } = useDarkmode();
   return (
     <div className="mb-[100px]">
       <h1 className={`mb-4 font-playfair text-headline3 ${textColor()}`}>
@@ -23,6 +23,7 @@ export default function Project() {
           </div>
         );
       })}
+      <div className={`mt-10 ml-0 ${separateLine}`}></div>
     </div>
   );
 }

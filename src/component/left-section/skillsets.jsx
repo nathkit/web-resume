@@ -2,7 +2,7 @@ import myData from "../../data/data";
 import { useDarkmode } from "../../contexts/darkmodeContext";
 
 export default function SkillSet(props) {
-  const { paramContent, textColor, isDarkMode } = useDarkmode();
+  const { paramContent, textColor, isDarkMode, separateLine } = useDarkmode();
   return (
     <div className="mb-10">
       <h1 className={`mb-2 font-playfair text-headline3 ${textColor()}`}>
@@ -21,6 +21,7 @@ export default function SkillSet(props) {
           </div>
         );
       })}
+      <div className={`mt-10 ml-0 ${separateLine}`}></div>
     </div>
   );
 }
