@@ -44,14 +44,29 @@ export default function Header() {
           className={`${textColor()} font-playfair mt-4 mb-10 text-center text-headline1m max-w-[375px] tablet:max-w-[482px] tablet:text-headline1t desktop:max-w-[720px] desktop:text-headline1d desktop:mb-10 desktop:min-h-[100px] desktop:text-left`}>
           Nathkit Tangthumrongsakkul
         </h1>
-        <button
-          className="btn bg-etc-primary hover:opacity-80 active:opacity-100"
-          onClick={() => {
-            const footerElement = document.getElementById("footer");
-            footerElement.scrollIntoView({ behavior: "smooth" });
-          }}>
-          CONTACT ME
-        </button>
+        <div className="flex justify-center desktop:justify-start self-start w-full">
+          <button
+            className="btn bg-etc-primary hover:opacity-80 active:opacity-100 mr-5"
+            onClick={() => {
+              const footerElement = document.getElementById("footer");
+              footerElement.scrollIntoView({ behavior: "smooth" });
+            }}>
+            CONTACT ME
+          </button>
+          <button
+            onClick={() => {
+              const resumeLink = document.createElement("a");
+              resumeLink.href =
+                "https://1drv.ms/b/s!Arju_3xRjjHWxZIto48G0vUyhhrq-Q?e=W0JVll";
+              resumeLink.target = "_blank";
+              resumeLink.rel = "noopener noreferrer";
+              resumeLink.download = "231009_Nathkit Resume.pdf";
+              resumeLink.click();
+            }}
+            className="btn bg-etc-secondary hover:opacity-80 active:opacity-100">
+            Download Resume
+          </button>
+        </div>
       </div>
     </div>
   );

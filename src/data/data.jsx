@@ -146,12 +146,12 @@ export const myData = {
     {
       title: "Tip Calculator →",
       link: "https://tipcalculator-nathkit.netlify.app/",
-      desc: "Contributed to a project built with VITE and React, utilizing the built-in useState function for state management.",
+      desc: "Our Tip & Share Calculator, built with React.js & Tailwind CSS, ensures everyone pays their fair share during group outings. Elegance and efficiency at your fingertips.",
     },
     {
       title: "Pet-Sitter →",
       link: "https://pet-sitter-53f4f.web.app/",
-      desc: "Contributed to a project built with VITE and React, utilizing the built-in useState function for state management.",
+      desc: "the Pet-Sitter App. Built with React.js Node.js PostgreSQL Supabase Cloud. Featuring booking system, user management system and authentication system",
     },
   ],
 };
