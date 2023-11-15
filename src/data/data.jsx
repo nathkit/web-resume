@@ -56,6 +56,14 @@ export const myData = {
   ],
   experience: [
     {
+      job: "Developer",
+      desc: [
+        "Develops ERP software utilizing the Odoo framework, JavaScript, and Python.",
+      ],
+      year: "Nov'23 to Present",
+      company: "Winnergy Medical PCL.",
+    },
+    {
       job: "Developer in Training",
       desc: [
         "Completed intensive training in HTML, CSS, CLI, React, JavaScript, SQL, MongoDB, Node.js, Express.js, Git/Github, Authentication, Data Structures, and Algorithms.",
